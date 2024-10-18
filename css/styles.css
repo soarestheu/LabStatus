@@ -1,0 +1,80 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f8ff; /* Altera a cor de fundo para um tom agradável */
+}
+
+h1 {
+  color: #333; /* Cor do texto do título */
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #4CAF50; /* Cor do botão */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+button:hover {
+  background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px); /* Largura total menos o padding */
+  box-sizing: border-box;
+}
+
+form {
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+#computadores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 10px;
+  justify-items: center;
+}
+
+.computador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100px;
+  background-color: #e7f3fe; /* Fundo dos blocos de computadores */
+}
+
+.computador img {
+  width: 50px; /* Ajusta a largura da imagem */
+  height: 50px; /* Ajusta a altura da imagem */
+}
+
+.computador span {
+  margin-top: 5px;
+}
+
+.disponivel {
+  color: green;
+}
+
+.ocupado {
+  color: red;
+}
+
+.computador-label {
+  font-weight: bold;
+}
