@@ -10,11 +10,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             const status = localStorage.getItem(`computador${i}`) || 'disponivel';
             compDiv.className = 'computador';
             compDiv.innerHTML = `
-                <div class="computador-label">Computador ${i}</div>
-                <img src="img/computador.png" alt="Computador">
-                <span id="status${i}" class="${status}">${status}</span>
-                <button onclick="updateStatus(${i}, 'ocupado')">Ocupado</button>
-                <button onclick="updateStatus(${i}, 'disponivel')">Disponível</button>`;
+                <div class="status-box">
+                    <div class="computador-label">Computador ${i}</div>
+                    <img src="img/computador.png" alt="Computador">
+                    <span id="status${i}" class="${status}">${status}</span>
+                    <button class="ocupado" onclick="updateStatus(${i}, 'ocupado')">Ocupado</button>
+                    <button class="disponivel" onclick="updateStatus(${i}, 'disponivel')">Disponível</button>
+                </div>`;
             document.getElementById('computadores').appendChild(compDiv);
         }
     } else {
