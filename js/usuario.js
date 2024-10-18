@@ -6,9 +6,11 @@ function fetchStatus() {
         const compDiv = document.createElement('div');
         compDiv.className = 'computador';
         compDiv.innerHTML = `
-            <div class="computador-label">Computador ${i}</div>
-            <img src="img/computador.png" alt="Computador">
-            <span class="${status}">${status}</span>`;
+             <div class="status-box">
+                <div class="computador-label">Computador ${i}</div>
+                <img src="img/computador.png" alt="Computador">
+                <span class="${status}">${status}</span>
+            </div>`;
         statusDiv.appendChild(compDiv);
     }
 }
