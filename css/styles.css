@@ -7,22 +7,41 @@ body {
 
 h1 {
   color: #333; /* Cor do texto do título */
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem; 
 }
 
 button {
+  background-color: #28a745;
+  color: white !important; 
+  padding: 10px 20px; 
   margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  background-color: #4CAF50; /* Cor do botão */
-  color: white;
-  border-radius: 5px;
+  border: none; 
+  border-radius: 8px; 
+  font-size: 1rem; 
+  font-weight: bold; 
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #45a049; /* Cor do botão ao passar o mouse */
+  background-color: #218838; 
+  transform: scale(1.05);
+}
+
+
+button:active {
+  transform: scale(0.98); 
+}
+
+button.ocupado {
+  background-color: #dc3545 !important;
+}
+
+button.ocupado:hover {
+  background-color: #c82333 !important;
 }
 
 input[type="number"] {
@@ -77,4 +96,46 @@ form {
 
 .computador-label {
   font-weight: bold;
+}
+
+
+.status-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.status-box:hover {
+  transform: scale(1.05);
+}
+
+.status-box img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.status-box h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.status-box p {
+  font-size: 1.1rem;
+  color: green;
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 2rem;
 }
